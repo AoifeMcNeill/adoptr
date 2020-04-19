@@ -1,7 +1,32 @@
+<!--Created navbar already on my Codepen account at: https://codepen.io/AoifeMcNeill/pen/gOpmRoP-->
+<nav class="navbar fixed-top navbar-expand-sm navbar-light" style="background-color: #E3FFF5">
+  <ul class="nav navbar-nav mr-auto">
+      <li class="nav-item">
+          <i class="fas fa-paw"></i>
+          <span class="navbar-brand">
+        Adoptr
+      </span>
+      </li>
+  </ul>
+  <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item">
+          <a class="nav-link" routerLinkActive = "active" routerLink="/home-page">Home Page</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLinkActive = "active" routerLink="/adopt-page">Adopt Page</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLinkActive = "active" routerLink="/about-page">About Page</a>
+      </li>
+  </ul>
+</nav>
+
+<!--
 <nav>
   <a routerLinkActive = "active" routerLink = "/home-page">Home Page</a>
   <a routerLinkActive = "active" routerLink = "/adopt-page">Adopt Page</a>
   <a routerLinkActive = "active" routerLink = "/about-page">About Page</a>
 </nav>
+-->
 
 <router-outlet></router-outlet>
