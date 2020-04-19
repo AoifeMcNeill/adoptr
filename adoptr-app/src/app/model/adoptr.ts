@@ -1,4 +1,4 @@
-export class Adoptr {
+export class List {
     category: string;
     breed: string;
     colour: string;
