@@ -198,8 +198,13 @@
                     <option>No</option>
                 </select>
             </div>
-            <button type="submit" class="btn mb-2" id="btnSubmit">Let's Go!</button>
+            <button type="submit" class="btn mb-2" id="btnSubmit" (click)="getPetByCategory(pet.category)">Let's Go!{{ pet.category }}</button>
         </form>
+        <br>
+        <h3>Pets:</h3>
+        <div *ngFor="let category of pet.category">
+            <li>{{ category }}</li>
+        </div>
     </div>
 </body>
 
