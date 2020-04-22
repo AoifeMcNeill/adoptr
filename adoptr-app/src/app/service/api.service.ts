@@ -29,6 +29,17 @@ export class ApiService {
     )
   }
 
+  //Get pets by name
+  getPetByName(name): Observable<any> {
+    let url = `${this.baseUri}/read/${name}`;
+    return this.http.get(url, {headers: this.headers}).pipe(
+      map((res: Response) => {
+        return res || {}
+      }),
+      catchError(this.errorMgmt)
+    )
+  }
+
   //Get pets by category
   getPetByCategory(category): Observable<any> {
     let url = `${this.baseUri}/read/${category}`;

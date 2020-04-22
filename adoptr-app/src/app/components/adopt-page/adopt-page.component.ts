@@ -9,6 +9,7 @@ import { ApiService } from './../../service/api.service';
 export class AdoptPageComponent implements OnInit {
 
   pet;
+  currentPetByName = '';
   currentPetCategory = 'cats';
   currentPetBreed = 'Birman';
   currentPetColour = 'flame point';
@@ -22,6 +23,7 @@ export class AdoptPageComponent implements OnInit {
   currentPetAdoptable = true;
 
   constructor(private apiService: ApiService) { 
+    this.getPetByName(this.pet);
     this.getPetByCategory(this.pet);
     this.getPetByBreed(this.pet);
     this.getPetByColour(this.pet);
@@ -36,6 +38,14 @@ export class AdoptPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  getPetByName(name){
+    this.apiService.getPetByName(name).subscribe((data) => {
+      this.pet = data[0];
+      this.currentPetByName = this.pet.name;
+      //console.log(this.pet);
+    })
   }
 
   getPetByCategory(category){

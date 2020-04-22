@@ -1,4 +1,5 @@
 export class List {
+    name: string;
     category: string;
     breed: string;
     colour: string;

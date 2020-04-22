@@ -3,6 +3,9 @@ const Schema = mongoose.Schema;
 
 //Define collection and schema
 let AdoptrSchema = new Schema({
+    name: {
+        type: String
+    },
     category: {
         type: String
     },
@@ -38,4 +41,4 @@ let AdoptrSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model('List', AdoptrSchema)
+module.exports = mongoose.model('pets_table', AdoptrSchema)
