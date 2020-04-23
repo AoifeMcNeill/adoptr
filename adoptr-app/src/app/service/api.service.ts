@@ -31,7 +31,7 @@ export class ApiService {
 
   //Get pets by name
   getPetByName(name): Observable<any> {
-    let url = `${this.baseUri}/read/${name}`;
+    let url = `${this.baseUri}/name/${name}`;
     return this.http.get(url, {headers: this.headers}).pipe(
       map((res: Response) => {
         return res || {}
@@ -42,7 +42,7 @@ export class ApiService {
 
   //Get pets by category
   getPetByCategory(category): Observable<any> {
-    let url = `${this.baseUri}/read/${category}`;
+    let url = `${this.baseUri}/category/${category}`;
     return this.http.get(url, {headers: this.headers}).pipe(
       map((res: Response) => {
         return res || {}
@@ -53,7 +53,7 @@ export class ApiService {
 
   //Get pets by breed
   getPetByBreed(breed): Observable<any> {
-    let url = `${this.baseUri}/read/${breed}`;
+    let url = `${this.baseUri}/breed/${breed}`;
     return this.http.get(url, {headers: this.headers}).pipe(
       map((res: Response) => {
         return res || {}
@@ -64,7 +64,7 @@ export class ApiService {
 
   //Get pets by colour
   getPetByColour(colour): Observable<any> {
-    let url = `${this.baseUri}/read/${colour}`;
+    let url = `${this.baseUri}/colour/${colour}`;
     return this.http.get(url, {headers: this.headers}).pipe(
       map((res: Response) => {
         return res || {}
@@ -75,7 +75,7 @@ export class ApiService {
 
   //Get pets by coat
   getPetByCoat(coat): Observable<any> {
-    let url = `${this.baseUri}/read/${coat}`;
+    let url = `${this.baseUri}/coat/${coat}`;
     return this.http.get(url, {headers: this.headers}).pipe(
       map((res: Response) => {
         return res || {}
@@ -86,7 +86,7 @@ export class ApiService {
 
   //Get pets by size
   getPetBySize(size): Observable<any> {
-    let url = `${this.baseUri}/read/${size}`;
+    let url = `${this.baseUri}/size/${size}`;
     return this.http.get(url, {headers: this.headers}).pipe(
       map((res: Response) => {
         return res || {}
@@ -97,7 +97,7 @@ export class ApiService {
 
   //Get pets by sex
   getPetBySex(sex): Observable<any> {
-    let url = `${this.baseUri}/read/${sex}`;
+    let url = `${this.baseUri}/sex/${sex}`;
     return this.http.get(url, {headers: this.headers}).pipe(
       map((res: Response) => {
         return res || {}
@@ -108,7 +108,7 @@ export class ApiService {
 
   //Get pets by age
   getPetByAge(age): Observable<any> {
-    let url = `${this.baseUri}/read/${age}`;
+    let url = `${this.baseUri}/age/${age}`;
     return this.http.get(url, {headers: this.headers}).pipe(
       map((res: Response) => {
         return res || {}
@@ -119,7 +119,7 @@ export class ApiService {
 
   //Get pets by cat_friendly
   getPetByCatFriendly(cat_friendly): Observable<any> {
-    let url = `${this.baseUri}/read/${cat_friendly}`;
+    let url = `${this.baseUri}/cat_friendly/${cat_friendly}`;
     return this.http.get(url, {headers: this.headers}).pipe(
       map((res: Response) => {
         return res || {}
@@ -130,7 +130,7 @@ export class ApiService {
 
   //Get pets by dog_friendly
   getPetByDogFriendly(dog_friendly): Observable<any> {
-    let url = `${this.baseUri}/read/${dog_friendly}`;
+    let url = `${this.baseUri}/dog_friendly/${dog_friendly}`;
     return this.http.get(url, {headers: this.headers}).pipe(
       map((res: Response) => {
         return res || {}
@@ -141,7 +141,7 @@ export class ApiService {
 
   //Get pets by child_friendly
   getPetByChildFriendly(child_friendly): Observable<any> {
-    let url = `${this.baseUri}/read/${child_friendly}`;
+    let url = `${this.baseUri}/child_friendly/${child_friendly}`;
     return this.http.get(url, {headers: this.headers}).pipe(
       map((res: Response) => {
         return res || {}
@@ -152,7 +152,7 @@ export class ApiService {
 
   //Get pets by adoptable
   getPetByAdoptable(adoptable): Observable<any> {
-    let url = `${this.baseUri}/read/${adoptable}`;
+    let url = `${this.baseUri}/adoptable/${adoptable}`;
     return this.http.get(url, {headers: this.headers}).pipe(
       map((res: Response) => {
         return res || {}

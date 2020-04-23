@@ -1,4 +1,4 @@
-export class List {
+export class pets_table {
     name: string;
     category: string;
     breed: string;
@@ -10,4 +10,5 @@ export class List {
     cat_friendly: boolean;
     dog_friendly: boolean;
     child_friendly: boolean;
+    adoptable: boolean;
 }
