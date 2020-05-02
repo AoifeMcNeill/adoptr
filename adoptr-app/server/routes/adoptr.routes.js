@@ -16,6 +16,43 @@ adoptrRoute.route('/').get((req, res) => {
     })
 })
 
+//Get all pets
+adoptrRoute.route('/find').get((req, res) => {
+
+    let limit = {}
+    if(req.query.sex){
+        limit.sex = req.query.sex
+    }
+
+    if(req.query.age){
+        limit.age = req.query.age
+    }
+
+    if(req.query.cat_friendly){
+        limit.cat_friendly = req.query.cat_friendly
+    }
+
+    if(req.query.dog_friendly){
+        limit.dog_friendly = req.query.dog_friendly
+    }
+
+    if(req.query.child_friendly){
+        limit.child_friendly = req.query.child_friendly
+    }
+
+    if(req.query.adoptable){
+        limit.adoptable = req.query.adoptable
+    }
+
+    pets_table.find(limit, (error, data) => {
+        if (error) {
+            return next(error)
+        } else {
+            res.json(data)
+        }
+    })
+})
+
 //Get one pet by id
 adoptrRoute.route('/read/:id').get((req, res) => {
     pets_table.findById(req.params.id, (error, data) => {

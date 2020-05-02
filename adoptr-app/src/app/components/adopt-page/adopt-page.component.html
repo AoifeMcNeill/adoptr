@@ -15,7 +15,12 @@
 <body>
     <!--Created most of "adopt" form already at: https://codepen.io/AoifeMcNeill/pen/ExjWvRV-->
     <div class="container-fluid position-relative" id="adoptForm">
-        <form>
+        <form [formGroup]="queryForm" (ngSubmit)="onSubmit(queryForm.value)">
+            <!--
+            <div class="form-group w-25">
+                <label for="nameSearch">Search by Name:</label>
+                <input type="text" class="form-control" id="nameSearch">
+            </div>
             <div class="form-group w-25">
                 <label for="selectCategory">Select Category:</label>
                 <select class="form-control custom-select" id="selectCategory">
@@ -129,9 +134,10 @@
                     <option>Short</option>
                 </select>
             </div>
+        -->
             <div class="form-group w-25">
                 <label for="selectSize">Select Size:</label>
-                <select class="form-control custom-select" id="selectSize">
+                <select class="form-control custom-select" id="selectSize" formControlName="size">
                     <option>--Select--</option>
                     <option>Giant</option>
                     <option>Large</option>
@@ -141,7 +147,7 @@
             </div>
             <div class="form-group w-25">
                 <label for="selectSex">Select Sex:</label>
-                <select class="form-control custom-select" id="select Sex">
+                <select class="form-control custom-select" id="select Sex" formControlName="sex">
                     <option>--Select--</option>
                     <option>Male</option>
                     <option>Female</option>
@@ -149,7 +155,7 @@
             </div>
             <div class="form-group w-25">
                 <label for="selectAge">Select Age:</label>
-                <select class="form-control custom-select" id="selectAge">
+                <select class="form-control custom-select" id="selectAge" formControlName="age">
                     <option>--Select--</option>
                     <option>0</option>
                     <option>1</option>
@@ -168,7 +174,7 @@
             </div>
             <div class="form-group w-25">
                 <label for="selectCatFriendly">Cat Friendly?</label>
-                <select class="form-control custom-select" id="selectCatFriendly">
+                <select class="form-control custom-select" id="selectCatFriendly" formControlName="cat_friendly">
                     <option>--Select--</option>
                     <option>Yes</option>
                     <option>No</option>
@@ -176,7 +182,7 @@
             </div>
             <div class="form-group w-25">
                 <label for="selectDogFriendly">Dog Friendly?</label>
-                <select class="form-control custom-select" id="selectDogFriendly">
+                <select class="form-control custom-select" id="selectDogFriendly" formControlName="dog_friendly">
                     <option>--Select--</option>
                     <option>Yes</option>
                     <option>No</option>
@@ -184,7 +190,7 @@
             </div>
             <div class="form-group w-25">
                 <label for="selectChildFriendly">Child Friendly?</label>
-                <select class="form-control custom-select" id="selectChildFriendly">
+                <select class="form-control custom-select" id="selectChildFriendly" formControlName="child_friendly">
                     <option>--Select--</option>
                     <option>Yes</option>
                     <option>No</option>
@@ -192,18 +198,21 @@
             </div>
             <div class="form-group w-25">
                 <label for="selectAdoptable">Adoptable?</label>
-                <select class="form-control custom-select" id="selectAdoptable">
+                <select class="form-control custom-select" id="selectAdoptable" formControlName="adoptable">
                     <option>--Select--</option>
                     <option>Yes</option>
                     <option>No</option>
                 </select>
             </div>
-            <button type="submit" class="btn mb-2" id="btnSubmit" (click)="getPetByCategory(pet.category)">Let's Go!{{ pet.category }}</button>
+            <!-- <button class="btn mb-2" id="btnSubmit" onclick="submitQuery()">Submit</button> -->
+            <button class="btn mb-2" type="submit">Submit</button>
         </form>
         <br>
         <h3>Pets:</h3>
-        <div *ngFor="let category of pet.category">
-            <li>{{ category }}</li>
+        <div>
+            <li *ngFor="let p of pet">
+                {{ p.name }}
+            </li>
         </div>
     </div>
 </body>

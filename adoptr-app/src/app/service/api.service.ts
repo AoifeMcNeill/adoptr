@@ -18,6 +18,10 @@ export class ApiService {
     return this.http.get(`${this.baseUri}`);
   }
 
+  getSome(limits): Observable<any> {
+    return this.http.get(`${this.baseUri}/find`, {headers: this.headers, params: limits})
+  }
+
   //Get pet by id
   getPetById(id): Observable<any> {
     let url = `${this.baseUri}/read/${id}`;
