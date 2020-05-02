@@ -20,6 +20,27 @@ adoptrRoute.route('/').get((req, res) => {
 adoptrRoute.route('/find').get((req, res) => {
 
     let limit = {}
+
+    if(req.query.category){
+        limit.category = req.query.category
+    }
+    
+    if(req.query.breed){
+        limit.breed = req.query.breed
+    }
+
+    if(req.query.colour){
+        limit.colour = req.query.colour
+    }
+
+    if(req.query.coat){
+        limit.coat = req.query.coat
+    }
+
+    if(req.query.size){
+        limit.size = req.query.size
+    }
+
     if(req.query.sex){
         limit.sex = req.query.sex
     }

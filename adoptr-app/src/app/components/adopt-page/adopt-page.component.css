@@ -12,3 +12,60 @@
     background-color: #B0FFE3;
     border-color: #B0FFE3;
 }
+
+#hName, #hBreed, #hColour, #hCoat, #hSize, #hSex, #hAge, #hCatFriend, #hDogFriend, #hChildFriend, #hAdoptable{
+    background-color: #B0FFE3;
+    border-style: 1px solid #B0FFE3;
+    text-align: center; 
+}
+
+#hBreed, #hCatFriend, #hDogFriend, #hChildFriend{
+    width: 180px;
+}
+
+#hName{
+    width: 170px;
+}
+
+#hColour{
+    width: 160px;
+}
+
+#hCatFriend, #hDogFriend, #hChildFriend{
+    width: 120px;
+}
+
+#hAdoptable{
+    width: 90px;
+}
+
+#hCoat{
+    width: 80px;
+}
+
+#hSize{
+    width: 60px;
+}
+
+#hSex, #hAge{
+    width: 50px;
+}
+
+#liBreed, #liColour, #liCoat, #liSize, #liSex, #liAge, #liCatFriend, #liDogFriend, #liChildFriend, #liAdoptable{
+    list-style-type: none;
+    float: left;
+    padding-left: 2px;
+}
+
+#liName {
+    list-style-type: none;
+    float: left;
+}
+
+li { 
+    background: #fff; 
+}
+
+li:nth-child(odd) { 
+    background: #E3FFF5; 
+}

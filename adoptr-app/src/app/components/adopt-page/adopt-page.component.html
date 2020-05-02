@@ -21,197 +21,258 @@
                 <label for="nameSearch">Search by Name:</label>
                 <input type="text" class="form-control" id="nameSearch">
             </div>
-            <div class="form-group w-25">
-                <label for="selectCategory">Select Category:</label>
-                <select class="form-control custom-select" id="selectCategory">
-                    <option>--Select--</option>
-                    <option>Cats</option>
-                    <option>Dogs</option>
-                </select>
-            </div>
-            <div class="form-group w-25">
-                <label for="selectBreedCat">Select Breed for Cat:</label>
-                <select class="form-control custom-select" id="selectBreedCat">
-                    <option>--Select--</option>
-                    <option>Birman</option>
-                    <option>Bengal</option>
-                    <option>British Short Hair</option>
-                    <option>Maine Coon</option>
-                    <option>Norwegian Forest Cat</option>
-                </select>
-            </div>
-            <div class = "form-group w-25">
-                <label for="selectBreedDog">Select Breed for Dog:</label>
-                <select class="form-control custom-select" id="selectBreedDog">
-                    <option>--Select--</option>
-                    <option>Akita</option>
-                    <option>Alaskan Malamute</option>
-                    <option>Anatolian Shepherd Dog</option>
-                    <option>Australian Shepherd</option>
-                    <option>Beagle</option>
-                    <option>Belgian Tervuren</option>
-                    <option>Bernese Mountain Dog</option>
-                    <option>Border Collie</option>
-                    <option>Canaan</option>
-                    <option>Chesapeake Bay Retriever</option>
-                    <option>Chinook</option>
-                    <option>Collie</option>
-                    <option>Corgi</option>
-                    <option>Dalmatian</option>
-                    <option>Entlebucher Mountain Dog</option>
-                    <option>Finnish Spitz</option>
-                    <option>Flat-Coated Retriever</option>
-                    <option>German Shepherd</option>
-                    <option>Golden Retriever</option>
-                    <option>Great Dane</option>
-                    <option>Great Pyrenees</option>
-                    <option>Greater Swiss Mountain Dog</option>
-                    <option>Icelandic Sheepdog</option>
-                    <option>Irish Wolfhound</option>
-                    <option>Keeshond</option>
-                    <option>Labrador Retriever</option>
-                    <option>Leonberger</option>
-                    <option>Newfoundland</option>
-                    <option>Norwegian Buhund</option>
-                    <option>Norwegian Elkhound</option>
-                    <option>Norwegian Lundehund</option>
-                    <option>Old English Sheepdog</option>
-                    <option>Rottweiler</option>
-                    <option>Saint Bernard</option>
-                    <option>Samoyed</option>
-                    <option>Scottish Deerhound</option>
-                    <option>Shetland Sheepdog</option>
-                    <option>Shiba Inu</option>
-                    <option>Siberian Husky</option>
-                </select>
-            </div>
-            <div class="form-group w-25">
-                <label for="selectColour">Select Colour:</label>
-                <select class="form-control custom-select" id="selectColor">
-                    <option>--Select--</option>
-                    <option>Black</option>
-                    <option>Black and Rust</option>
-                    <option>Black and Tan</option>
-                    <option>Black and White</option>
-                    <option>Blue Merle</option>
-                    <option>Brown</option>
-                    <option>Brown Tabby</option>
-                    <option>Cream</option>
-                    <option>Deep Brown</option>
-                    <option>Fawn</option>
-                    <option>Fawn and Black</option>
-                    <option>Fawn with Black Mask</option>
-                    <option>Flame Point</option>
-                    <option>Grey</option>
-                    <option>Grey and White</option>
-                    <option>Light Brown</option>
-                    <option>Light Brown and White</option>
-                    <option>Light Gold</option>
-                    <option>Light Grey</option>
-                    <option>Pale Honey</option>
-                    <option>Red</option>
-                    <option>Red Tabby</option>
-                    <option>Reddish Brown</option>
-                    <option>Sable</option>
-                    <option>Sable and White</option>
-                    <option>Solid Black</option>
-                    <option>Tawny</option>
-                    <option>Tricolour</option>
-                    <option>Wheaten</option>
-                    <option>White</option>
-                    <option>White and Black</option>
-                    <option>White with Black Spots</option>
-                </select>
-            </div>
-            <div class = "form-group w-25">
-                <label for="selectCoat">Select Coat:</label>
-                <select class="form-control custom-select" id="selectCoat">
-                    <option>--Select--</option>
-                    <option>Double</option>
-                    <option>Long</option>
-                    <option>Medium</option>
-                    <option>Semi-Long</option>
-                    <option>Short</option>
-                </select>
-            </div>
         -->
-            <div class="form-group w-25">
-                <label for="selectSize">Select Size:</label>
-                <select class="form-control custom-select" id="selectSize" formControlName="size">
-                    <option>--Select--</option>
-                    <option>Giant</option>
-                    <option>Large</option>
-                    <option>Medium</option>
-                    <option>Small</option>
-                </select>
+            <div class = "d-flex flex-row">
+                <div class="form-group w-25 p-2">
+                    <label for="selectCategory">Select Category:</label>
+                    <select class="form-control custom-select d-inline-flex p-2" id="selectCategory" formControlName="category">
+                        <option>--Select--</option>
+                        <option>Cats</option>
+                        <option>Dogs</option>
+                    </select>
+                </div>
+                <div class = "form-group w-25 p-2">
+                    <label for="selectBreed">Select Breed:</label>
+                    <select class="form-control custom-select" id="selectBreed" formControlName="breed">
+                        <option>--Select--</option>
+                        <option>Akita</option>
+                        <option>Alaskan Malamute</option>
+                        <option>Anatolian Shepherd Dog</option>
+                        <option>Australian Shepherd</option>
+                        <option>Beagle</option>
+                        <option>Belgian Tervuren</option>
+                        <option>Bengal</option>
+                        <option>Bernese Mountain Dog</option>
+                        <option>Birman</option>
+                        <option>Border Collie</option>
+                        <option>British Short Hair</option>
+                        <option>Canaan</option>
+                        <option>Chesapeake Bay Retriever</option>
+                        <option>Chinook</option>
+                        <option>Collie</option>
+                        <option>Corgi</option>
+                        <option>Dalmatian</option>
+                        <option>Entlebucher Mountain Dog</option>
+                        <option>Finnish Spitz</option>
+                        <option>Flat-Coated Retriever</option>
+                        <option>German Shepherd</option>
+                        <option>Golden Retriever</option>
+                        <option>Great Dane</option>
+                        <option>Great Pyrenees</option>
+                        <option>Greater Swiss Mountain Dog</option>
+                        <option>Icelandic Sheepdog</option>
+                        <option>Irish Wolfhound</option>
+                        <option>Keeshond</option>
+                        <option>Labrador Retriever</option>
+                        <option>Leonberger</option>
+                        <option>Maine Coon</option>
+                        <option>Newfoundland</option>
+                        <option>Norwegian Buhund</option>
+                        <option>Norwegian Elkhound</option>
+                        <option>Norwegian Forest Cat</option>
+                        <option>Norwegian Lundehund</option>
+                        <option>Old English Sheepdog</option>
+                        <option>Rottweiler</option>
+                        <option>Saint Bernard</option>
+                        <option>Samoyed</option>
+                        <option>Scottish Deerhound</option>
+                        <option>Shetland Sheepdog</option>
+                        <option>Shiba Inu</option>
+                        <option>Siberian Husky</option>
+                    </select>
+                </div>
+                <div class="form-group w-25 p-2">
+                    <label for="selectColour">Select Colour:</label>
+                    <select class="form-control custom-select" id="selectColor" formControlName="colour">
+                        <option>--Select--</option>
+                        <option>Black</option>
+                        <option>Black and Rust</option>
+                        <option>Black and Tan</option>
+                        <option>Black and White</option>
+                        <option>Blue Merle</option>
+                        <option>Brown</option>
+                        <option>Brown Tabby</option>
+                        <option>Cream</option>
+                        <option>Deep Brown</option>
+                        <option>Fawn</option>
+                        <option>Fawn and Black</option>
+                        <option>Fawn with Black Mask</option>
+                        <option>Flame Point</option>
+                        <option>Grey</option>
+                        <option>Grey and White</option>
+                        <option>Light Brown</option>
+                        <option>Light Brown and White</option>
+                        <option>Light Gold</option>
+                        <option>Light Grey</option>
+                        <option>Pale Honey</option>
+                        <option>Red</option>
+                        <option>Red Tabby</option>
+                        <option>Reddish Brown</option>
+                        <option>Sable</option>
+                        <option>Sable and White</option>
+                        <option>Solid Black</option>
+                        <option>Tawny</option>
+                        <option>Tricolour</option>
+                        <option>Wheaten</option>
+                        <option>White</option>
+                        <option>White and Black</option>
+                        <option>White with Black Spots</option>
+                    </select>
+                </div>
+                <div class = "form-group w-25 p-2">
+                    <label for="selectCoat">Select Coat:</label>
+                    <select class="form-control custom-select" id="selectCoat" formControlName="coat">
+                        <option>--Select--</option>
+                        <option>Double</option>
+                        <option>Long</option>
+                        <option>Medium</option>
+                        <option>Semi-Long</option>
+                        <option>Short</option>
+                    </select>
+                </div>
             </div>
-            <div class="form-group w-25">
-                <label for="selectSex">Select Sex:</label>
-                <select class="form-control custom-select" id="select Sex" formControlName="sex">
-                    <option>--Select--</option>
-                    <option>Male</option>
-                    <option>Female</option>
-                </select>
+            <div class = "d-flex flex-row">
+                <div class="form-group w-25 p-2">
+                    <label for="selectSize">Select Size:</label>
+                    <select class="form-control custom-select" id="selectSize" formControlName="size">
+                        <option>--Select--</option>
+                        <option>Giant</option>
+                        <option>Large</option>
+                        <option>Medium</option>
+                        <option>Small</option>
+                    </select>
+                </div>
+                <div class="form-group w-25 p-2">
+                    <label for="selectSex">Select Sex:</label>
+                    <select class="form-control custom-select" id="select Sex" formControlName="sex">
+                        <option>--Select--</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <div class="form-group w-25 p-2">
+                    <label for="selectAge">Select Age:</label>
+                    <select class="form-control custom-select" id="selectAge" formControlName="age">
+                        <option>--Select--</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </div>
             </div>
-            <div class="form-group w-25">
-                <label for="selectAge">Select Age:</label>
-                <select class="form-control custom-select" id="selectAge" formControlName="age">
-                    <option>--Select--</option>
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                </select>
-            </div>
-            <div class="form-group w-25">
-                <label for="selectCatFriendly">Cat Friendly?</label>
-                <select class="form-control custom-select" id="selectCatFriendly" formControlName="cat_friendly">
-                    <option>--Select--</option>
-                    <option>Yes</option>
-                    <option>No</option>
-                </select>
-            </div>
-            <div class="form-group w-25">
-                <label for="selectDogFriendly">Dog Friendly?</label>
-                <select class="form-control custom-select" id="selectDogFriendly" formControlName="dog_friendly">
-                    <option>--Select--</option>
-                    <option>Yes</option>
-                    <option>No</option>
-                </select>
-            </div>
-            <div class="form-group w-25">
-                <label for="selectChildFriendly">Child Friendly?</label>
-                <select class="form-control custom-select" id="selectChildFriendly" formControlName="child_friendly">
-                    <option>--Select--</option>
-                    <option>Yes</option>
-                    <option>No</option>
-                </select>
-            </div>
-            <div class="form-group w-25">
-                <label for="selectAdoptable">Adoptable?</label>
-                <select class="form-control custom-select" id="selectAdoptable" formControlName="adoptable">
-                    <option>--Select--</option>
-                    <option>Yes</option>
-                    <option>No</option>
-                </select>
+            <div class = "d-flex flex-row">
+                <div class="form-group w-25 p-2">
+                    <label for="selectCatFriendly">Cat Friendly?</label>
+                    <select class="form-control custom-select" id="selectCatFriendly" formControlName="cat_friendly">
+                        <option>--Select--</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div class="form-group w-25 p-2">
+                    <label for="selectDogFriendly">Dog Friendly?</label>
+                    <select class="form-control custom-select" id="selectDogFriendly" formControlName="dog_friendly">
+                        <option>--Select--</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div class="form-group w-25 p-2">
+                    <label for="selectChildFriendly">Child Friendly?</label>
+                    <select class="form-control custom-select" id="selectChildFriendly" formControlName="child_friendly">
+                        <option>--Select--</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div class="form-group w-25 p-2">
+                    <label for="selectAdoptable">Adoptable?</label>
+                    <select class="form-control custom-select" id="selectAdoptable" formControlName="adoptable">
+                        <option>--Select--</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
             </div>
             <!-- <button class="btn mb-2" id="btnSubmit" onclick="submitQuery()">Submit</button> -->
-            <button class="btn mb-2" type="submit">Submit</button>
+            <button class="btn mb-2" id="btnSubmit" type="submit">Submit</button>
         </form>
         <br>
         <h3>Pets:</h3>
-        <div>
+        <div id = "liName">
+            <div id="hName">Name</div>
             <li *ngFor="let p of pet">
                 {{ p.name }}
+            </li>
+        </div>
+        <div id = "liBreed">
+            <div id="hBreed">Breed</div>
+            <li *ngFor="let p of pet">
+                {{ p.breed }}
+            </li>
+        </div>
+        <div id ="liColour">
+            <div id="hColour">Colour</div>
+            <li *ngFor="let p of pet">
+                {{ p.colour }}
+            </li>
+        </div>
+        <div id = "liCoat">
+            <div id="hCoat">Coat</div>
+            <li *ngFor="let p of pet">
+                {{ p.coat }}
+            </li>
+        </div>
+        <div id = "liSize">
+            <div id="hSize">Size</div>
+            <li *ngFor="let p of pet">
+                {{ p.size }}
+            </li>
+        </div>
+        <div id = "liSex">
+            <div id="hSex">Sex</div>
+            <li *ngFor="let p of pet">
+                {{ p.sex }}
+            </li>
+        </div>
+        <div id = "liAge">
+            <div id="hAge">Age</div>
+            <li *ngFor="let p of pet">
+                {{ p.age }}
+            </li>
+        </div>
+        <div id = "liCatFriend">
+            <div id="hCatFriend">Cat Friendly</div>
+            <li *ngFor="let p of pet">
+                {{ p.cat_friendly }}
+            </li>
+        </div>
+        <div id = "liDogFriend">
+            <div id = "hDogFriend">Dog Friendly</div>
+            <li *ngFor="let p of pet">
+                {{ p.dog_friendly }}
+            </li>
+        </div>
+        <div id = "liChildFriend">
+            <div id = "hChildFriend">Child Friendly</div>
+            <li *ngFor="let p of pet">
+                {{ p.child_friendly }}
+            </li>
+        </div>
+        <div id = "liAdoptable">
+            <div id = "hAdoptable">Adoptable</div>
+            <li *ngFor="let p of pet">
+                {{ p.adoptable }}
             </li>
         </div>
     </div>
