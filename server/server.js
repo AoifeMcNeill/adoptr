@@ -25,8 +25,8 @@ app.use(bodyParser.urlencoded({
 
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'dist/adoptr-app')));
-app.use('/', express.static(path.join(__dirname, 'dist/adoptr-app')));
+app.use(express.static(path.join(__dirname, '../dist/adoptr-app')));
+app.use('/', express.static(path.join(__dirname, '../dist/adoptr-app')));
 app.use('/api', adoptrRoute)
 
 //Create port
