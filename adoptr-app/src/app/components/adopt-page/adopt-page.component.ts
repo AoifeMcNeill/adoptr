@@ -44,6 +44,7 @@ export class AdoptPageComponent implements OnInit {
     // this.getPetByAdoptable(this.pet);
 
     this.queryForm = this.formBuilder.group({
+      name: "",
       category: "",
       breed: "",
       colour: "",
@@ -116,6 +117,18 @@ export class AdoptPageComponent implements OnInit {
     // }
 
     let limits: {[k: string]: any} = {};
+
+    if(data.name != ""){
+      //if(data.name == this.pet.name){
+        limits.name = data.name;
+      //}
+      //else{
+      //  return data.name + "could not be found";
+      //}
+    }
+    else{
+      return "could not be found";
+    }
 
     if(data.category == "Cats"){
       limits.category = "cats";
@@ -508,7 +521,7 @@ export class AdoptPageComponent implements OnInit {
 
   getPetByName(name){
     this.apiService.getPetByName(name).subscribe((data) => {
-      this.pet = data[0];
+      this.pet = data;
       this.currentPetByName = this.pet.name;
       //console.log(this.pet);
     })

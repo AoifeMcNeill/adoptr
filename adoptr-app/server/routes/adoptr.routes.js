@@ -21,6 +21,10 @@ adoptrRoute.route('/find').get((req, res) => {
 
     let limit = {}
 
+    if(req.query.name){
+        limit.name = req.query.name
+    }
+
     if(req.query.category){
         limit.category = req.query.category
     }

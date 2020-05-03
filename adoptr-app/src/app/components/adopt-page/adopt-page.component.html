@@ -16,12 +16,10 @@
     <!--Created most of "adopt" form already at: https://codepen.io/AoifeMcNeill/pen/ExjWvRV-->
     <div class="container-fluid position-relative" id="adoptForm">
         <form [formGroup]="queryForm" (ngSubmit)="onSubmit(queryForm.value)">
-            <!--
             <div class="form-group w-25">
                 <label for="nameSearch">Search by Name:</label>
-                <input type="text" class="form-control" id="nameSearch">
+                <input type="text" class="form-control" id="nameSearch" formControlName="name">
             </div>
-        -->
             <div class = "d-flex flex-row">
                 <div class="form-group w-25 p-2">
                     <label for="selectCategory">Select Category:</label>
@@ -208,72 +206,77 @@
             <button class="btn mb-2" id="btnSubmit" type="submit">Submit</button>
         </form>
         <br>
-        <h3>Pets:</h3>
-        <div id = "liName">
-            <div id="hName">Name</div>
-            <li *ngFor="let p of pet">
-                {{ p.name }}
-            </li>
+        <div *ngIf="pet && pet.length == 0">
+            <p>No pets found</p>
         </div>
-        <div id = "liBreed">
-            <div id="hBreed">Breed</div>
-            <li *ngFor="let p of pet">
-                {{ p.breed }}
-            </li>
-        </div>
-        <div id ="liColour">
-            <div id="hColour">Colour</div>
-            <li *ngFor="let p of pet">
-                {{ p.colour }}
-            </li>
-        </div>
-        <div id = "liCoat">
-            <div id="hCoat">Coat</div>
-            <li *ngFor="let p of pet">
-                {{ p.coat }}
-            </li>
-        </div>
-        <div id = "liSize">
-            <div id="hSize">Size</div>
-            <li *ngFor="let p of pet">
-                {{ p.size }}
-            </li>
-        </div>
-        <div id = "liSex">
-            <div id="hSex">Sex</div>
-            <li *ngFor="let p of pet">
-                {{ p.sex }}
-            </li>
-        </div>
-        <div id = "liAge">
-            <div id="hAge">Age</div>
-            <li *ngFor="let p of pet">
-                {{ p.age }}
-            </li>
-        </div>
-        <div id = "liCatFriend">
-            <div id="hCatFriend">Cat Friendly</div>
-            <li *ngFor="let p of pet">
-                {{ p.cat_friendly }}
-            </li>
-        </div>
-        <div id = "liDogFriend">
-            <div id = "hDogFriend">Dog Friendly</div>
-            <li *ngFor="let p of pet">
-                {{ p.dog_friendly }}
-            </li>
-        </div>
-        <div id = "liChildFriend">
-            <div id = "hChildFriend">Child Friendly</div>
-            <li *ngFor="let p of pet">
-                {{ p.child_friendly }}
-            </li>
-        </div>
-        <div id = "liAdoptable">
-            <div id = "hAdoptable">Adoptable</div>
-            <li *ngFor="let p of pet">
-                {{ p.adoptable }}
-            </li>
+        <div *ngIf="pet && pet.length > 0">
+            <h3>Pets:</h3>
+            <div id = "liName">
+                <div id="hName">Name</div>
+                <li *ngFor="let p of pet">
+                    {{ p.name }}
+                </li>
+            </div>
+            <div id = "liBreed">
+                <div id="hBreed">Breed</div>
+                <li *ngFor="let p of pet">
+                    {{ p.breed }}
+                </li>
+            </div>
+            <div id ="liColour">
+                <div id="hColour">Colour</div>
+                <li *ngFor="let p of pet">
+                    {{ p.colour }}
+                </li>
+            </div>
+            <div id = "liCoat">
+                <div id="hCoat">Coat</div>
+                <li *ngFor="let p of pet">
+                    {{ p.coat }}
+                </li>
+            </div>
+            <div id = "liSize">
+                <div id="hSize">Size</div>
+                <li *ngFor="let p of pet">
+                    {{ p.size }}
+                </li>
+            </div>
+            <div id = "liSex">
+                <div id="hSex">Sex</div>
+                <li *ngFor="let p of pet">
+                    {{ p.sex }}
+                </li>
+            </div>
+            <div id = "liAge">
+                <div id="hAge">Age</div>
+                <li *ngFor="let p of pet">
+                    {{ p.age }}
+                </li>
+            </div>
+            <div id = "liCatFriend">
+                <div id="hCatFriend">Cat Friendly</div>
+                <li *ngFor="let p of pet">
+                    {{ p.cat_friendly }}
+                </li>
+            </div>
+            <div id = "liDogFriend">
+                <div id = "hDogFriend">Dog Friendly</div>
+                <li *ngFor="let p of pet">
+                    {{ p.dog_friendly }}
+                </li>
+            </div>
+            <div id = "liChildFriend">
+                <div id = "hChildFriend">Child Friendly</div>
+                <li *ngFor="let p of pet">
+                    {{ p.child_friendly }}
+                </li>
+            </div>
+            <div id = "liAdoptable">
+                <div id = "hAdoptable">Adoptable</div>
+                <li *ngFor="let p of pet">
+                    {{ p.adoptable }}
+                </li>
+            </div>
         </div>
     </div>
 </body>
