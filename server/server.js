@@ -26,11 +26,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(cors());
 app.use('/api', adoptrRoute)
-//app.use(express.static(path.join(__dirname, 'dist/adoptr-app')));
-//app.use('/', express.static(path.join(__dirname, 'dist/adoptr-app')));
 app.use((req, res, next)=>{
-    //console.log("Request:", req.originalUrl);
-    //console.log(path.join(__dirname, '..', 'dist', 'adoptr-app', req.originalUrl))
     if(req.originalUrl.includes("."))
         res.sendFile(path.join(__dirname, '..', 'dist', 'adoptr-app', req.originalUrl))
     else
