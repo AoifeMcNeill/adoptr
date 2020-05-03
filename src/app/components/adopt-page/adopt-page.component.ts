@@ -126,9 +126,9 @@ export class AdoptPageComponent implements OnInit {
       //  return data.name + "could not be found";
       //}
     }
-    else{
-      return "could not be found";
-    }
+    // else{
+    //   return "could not be found";
+    // }
 
     if(data.category == "Cats"){
       limits.category = "cats";
