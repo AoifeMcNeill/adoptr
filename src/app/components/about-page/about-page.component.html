@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-    <title>Adopt Page</title>
+    <title>About Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -11,4 +12,92 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 </head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light" style="background-color: #E3FFF5">
+        <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item">
+                <i class="fas fa-paw"></i>
+                <span class="navbar-brand">
+                    Adoptr
+                </span>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive = "active" routerLink="/home-page">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive = "active" routerLink="/adopt-page">Adopt</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive = "active" routerLink="/about-page">About</a>
+            </li>
+        </ul>
+    </nav>
+    <div id = "text">
+        <div>
+            <h2>About</h2>
+            <p>
+                The purpose of this website is to find out which pets are present at the fictional rescue organisation called Adoptr.
+                <br/><br/>
+                This is done by the user searching through the database using the form to find out whether or not their desired pet 
+                is there and up for adoption.
+                <br/><br/>
+                The database then sends back the information based on the search query and it displays as a table at the bottom of the form, 
+                showcasing the pet name, breed, colour, coat, size, sex, age and whether or not they are cat, dog or child friendly if they 
+                are up for adoption.
+            </p>
+            <br/>
+            <p>
+                This website has been created using a MEAN stack (MongoDB, Express, Angular, NodeJs) for the backend and HTML5, CSS3, 
+                JavaScript and Bootstrap for the front end.
+            </p>
+        </div>
+        <br/>
+        <div>
+            <h2>Third Party Content</h2>
+            <h4>Font Awesome Free License</h4>
+            <p>
+                Font Awesome Free is free, open source, and GPL friendly. You can use it for commercial projects, open source projects, 
+                or really almost whatever you want.
+            </p>
+            <h6><a href="https://fontawesome.com/">View Website</a></h6>
+            <h5>Icons — CC BY 4.0 License</h5>
+            <p>In the Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as .svg and .js files types.</p>
+            <h5>Fonts — SIL OFL 1.1 License</h5>
+            <p>In the Font Awesome Free download, the SIL OFL license applies to all icons packaged as web and desktop font files.</p>
+            <h5>Code — MIT License</h5>
+            <p>In the Font Awesome Free download, the MIT license applies to all non-font and non-icon files.</p>
+            <h6><a href = "https://fontawesome.com/license/free">View Free License</a></h6>
+            <br/><br/>
+            <h4>MongoDB Server Side Public License (SSPL)</h4>
+            <p>
+                MongoDB is a general purpose, document-based, distributed database built for modern application developers 
+                and for the cloud era. No database makes you more productive.
+            </p>
+            <h6><a href="https://www.mongodb.com/">View Website</a></h6>
+            <h5>Basic Permissions</h5>
+            <p>
+                All rights granted under this License are granted for the term of copyright on the Program, and are irrevocable 
+                provided the stated conditions are met. This License explicitly affirms your unlimited permission to run the 
+                unmodified Program, subject to section 13. The output from running a covered work is covered by this License 
+                only if the output, given its content, constitutes a covered work. This License acknowledges your rights of fair 
+                use or other equivalent, as provided by copyright law.
+                <br/><br/>
+                Subject to section 13, you may make, run and propagate covered works that you do not convey, without conditions 
+                so long as your license otherwise remains in force. You may convey covered works to others for the sole purpose 
+                of having them make modifications exclusively for you, or provide you with facilities for running those works, 
+                provided that you comply with the terms of this License in conveying all material for which you do not control 
+                copyright. Those thus making or running the covered works for you must do so exclusively on your behalf, under 
+                your direction and control, on terms that prohibit them from making any copies of your copyrighted material outside 
+                their relationship with you.
+                <br/><br/>
+                Conveying under any other circumstances is permitted solely under the conditions stated below. Sublicensing is not 
+                allowed; section 10 makes it unnecessary.
+            </p>
+            <h6><a href = "https://www.mongodb.com/licensing/server-side-public-license">View SSPL</a></h6>
+        </div>
+    </div>
+</body>
 </html>
