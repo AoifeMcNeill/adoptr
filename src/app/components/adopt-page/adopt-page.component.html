@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 
+<!--
+    Since the header implemented in app.component.html decided not to include the paw print for each page, 
+    I found it easier to implement it into every page.
+-->
 <head>
     <title>Adopt Page</title>
     <meta charset="utf-8">
@@ -14,11 +18,14 @@
 
 <body>
     <div class="container-fluid position-relative" id="adoptForm">
+        <!--Form area start-->
         <form [formGroup]="queryForm" (ngSubmit)="onSubmit(queryForm.value)">
+            <!--Search bar-->
             <div class="form-group w-25">
                 <label for="nameSearch">Search by Name:</label>
                 <input type="text" class="form-control" id="nameSearch" formControlName="name">
             </div>
+            <!--All the select options forms-->
             <div class = "d-flex flex-row">
                 <div class="form-group w-25 p-2">
                     <label for="selectCategory">Select Category:</label>
@@ -204,7 +211,9 @@
             <!-- <button class="btn mb-2" id="btnSubmit" onclick="submitQuery()">Submit</button> -->
             <button class="btn mb-2" id="btnSubmit" type="submit">Submit</button>
         </form>
+        <!--Form area end-->
         <br>
+        <!--Response area in tabular data (or error if no match found)-->
         <div *ngIf="pet && pet.length == 0">
             <p>No pets found</p>
         </div>
@@ -277,6 +286,7 @@
                 </li>
             </div>
         </div>
+        <!--Response area end-->
     </div>
 </body>
 

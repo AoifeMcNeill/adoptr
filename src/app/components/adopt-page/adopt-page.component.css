@@ -1,6 +1,4 @@
-#adoptForm {
-    margin-top: 60px;
-}
+#adoptForm {margin-top: 60px;}
 
 #btnSubmit {
     background-color: #E3FFF5;
@@ -13,59 +11,45 @@
     border-color: #B0FFE3;
 }
 
+/*For all headers*/
 #hName, #hBreed, #hColour, #hCoat, #hSize, #hSex, #hAge, #hCatFriend, #hDogFriend, #hChildFriend, #hAdoptable{
     background-color: #B0FFE3;
     border-style: 1px solid #B0FFE3;
     text-align: center; 
 }
 
-#hBreed{
-    width: 180px;
-}
+/*Some headers need different sizing, so these are added here*/
+#hBreed{width: 180px;}
 
-#hName{
-    width: 170px;
-}
+#hName{width: 170px;}
 
-#hColour{
-    width: 160px;
-}
+#hColour{width: 160px;}
 
-#hCatFriend, #hDogFriend, #hChildFriend{
-    width: 120px;
-}
+#hCatFriend, #hDogFriend, #hChildFriend{width: 120px;}
 
-#hAdoptable{
-    width: 90px;
-}
+#hAdoptable{width: 90px;}
 
-#hCoat{
-    width: 80px;
-}
+#hCoat{width: 80px;}
 
-#hSize{
-    width: 60px;
-}
+#hSize{width: 60px;}
 
-#hSex, #hAge{
-    width: 50px;
-}
+#hSex, #hAge{width: 50px;}
 
+/*For all tabular columns apart from the first one (name)*/
 #liBreed, #liColour, #liCoat, #liSize, #liSex, #liAge, #liCatFriend, #liDogFriend, #liChildFriend, #liAdoptable{
     list-style-type: none;
     float: left;
     padding-left: 2px;
 }
 
+/*First tabular column*/
 #liName {
     list-style-type: none;
     float: left;
 }
 
-li { 
-    background: #fff; 
-}
+/*Tabular content background start*/
+li { background: #fff; }
 
-li:nth-child(odd) { 
-    background: #E3FFF5; 
-}
+li:nth-child(odd) { background: #E3FFF5; }
+/*Tabular content background end*/

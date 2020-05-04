@@ -1,7 +1,52 @@
-#content{
-    padding-top: 80px;
+#content{padding-top: 80px;}
+
+/*Image CSS start*/
+/*Image*/
+#pic{
+  height: 350px;
+  width: 450px;
+  display: block;
+  margin: 0 auto;
+}
+/*Text overlay position*/
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: 95px;
+  background-color: #E3FFF5;
+  overflow: hidden;
+  width: 450px;
+  height: 0;
+  transition: .5s ease;
+  opacity: 0.7;
 }
 
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.container:hover .overlay {
+  height: 25%;
+}
+
+/*Text overlay text*/
+.text {
+  color: #000;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/*Image CSS ends*/
+
+/*Common positioning for all*/
 h1, h6, p{
     display: block;
     margin: 0 auto;
@@ -9,48 +54,5 @@ h1, h6, p{
     padding-bottom: 5px;
 }
 
-h6, p{
-    margin-top: 10px;
-}
-
-#pic{
-    height: 350px;
-    width: 450px;
-    display: block;
-    margin: 0 auto;
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-left: 95px;
-    background-color: #E3FFF5;
-    overflow: hidden;
-    width: 450px;
-    height: 0;
-    transition: .5s ease;
-    opacity: 0.7;
-  }
-
-  .container {
-    position: relative;
-    width: 50%;
-  }
-
-  .container:hover .overlay {
-    height: 25%;
-  }
-
-  .text {
-    color: #000;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+/*Text below image*/
+h6, p{margin-top: 10px;}

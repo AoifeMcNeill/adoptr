@@ -16,7 +16,7 @@ adoptrRoute.route('/').get((req, res) => {
     })
 })
 
-//Get all pets
+//Get pets based on query match
 adoptrRoute.route('/find').get((req, res) => {
 
     let limit = {}

@@ -8,6 +8,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 })
 export class ApiService {
 
+  //To switch between local and Heroku, just comment out one and uncomment the other. Currently set to Heroku
   baseUri:String = '/api';
   //baseUri:String = 'http://localhost:8080/api';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
@@ -19,6 +20,7 @@ export class ApiService {
     return this.http.get(`${this.baseUri}`);
   }
 
+  //Get some pets
   getSome(limits): Observable<any> {
     return this.http.get(`${this.baseUri}/find`, {headers: this.headers, params: limits})
   }

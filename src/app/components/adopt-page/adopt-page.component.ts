@@ -10,6 +10,7 @@ import { identifierModuleUrl } from '@angular/compiler';
 })
 export class AdoptPageComponent implements OnInit {
 
+  //Don't think I need this
   pet;
   currentPetByName = '';
   currentPetCategory = 'cats';
@@ -30,19 +31,8 @@ export class AdoptPageComponent implements OnInit {
     private apiService: ApiService,
     private formBuilder: FormBuilder
     ) { 
-    // this.getPetByName(this.pet);
-    // this.getPetByCategory(this.pet);
-    // this.getPetByBreed(this.pet);
-    // this.getPetByColour(this.pet);
-    // this.getPetByCoat(this.pet);
-    // this.getPetBySize(this.pet);
-    // this.getPetBySex(this.pet);
-    // this.getPetByAge(this.pet);
-    // this.getPetByCatFriendly(this.pet);
-    // this.getPetByDogFriendly(this.pet);
-    // this.getPetByChildFriendly(this.pet);
-    // this.getPetByAdoptable(this.pet);
 
+      //Form builder variables (bootstrap)
     this.queryForm = this.formBuilder.group({
       name: "",
       category: "",
@@ -64,72 +54,17 @@ export class AdoptPageComponent implements OnInit {
 
   onSubmit(data){
     console.log('clicked');
-    //console.log(this.queryForm.get("adoptable").value)
     console.log(data)
 
-   // if(data.child_friendly == "Yes"){
-     // this.getPetByChildFriendly(true);
-      //console.log("Is child friendly");
-   // }
-    //else if(data.child_friendly == "No") {
-      //this.getPetByChildFriendly(false);
-      //console.log("Is not child friendly")
-    //}
-   // else {
-     // console.log("Child friendly not selected")
-    //}
-
-    //if(data.adoptable == "Yes"){
-      //this.apiService.getPetByAdoptable(true).subscribe()
-     // this.getPetByAdoptable(true);
-       // console.log("Is adoptable")
-    //} 
-   // else if(data.adoptable == "No") {
-      //this.getPetByAdoptable(false);
-     // console.log("Is not adoptable")
-   // } 
-    //else {
-     // console.log("Adoptable not selected")
-    //}
-
-    // if(data.child_friendly == "Yes" && data.adoptable == "Yes"){
-    //   this.getPetByChildFriendly(true);
-    //   this.getPetByAdoptable(true);
-    //   console.log ("1|1")
-    // }
-    // else if (data.child_friendly == "Yes" && data.adoptable == "No"){
-    //   this.getPetByChildFriendly(true);
-    //   this.getPetByAdoptable(false);
-    //   console.log ("1|0")
-    // }
-    // else if (data.child_friendly == "No" && data.adoptable == "Yes"){
-    //   this.getPetByChildFriendly(false);
-    //   this.getPetByAdoptable(true);
-    //   console.log("0|1")
-    // }
-    // else if (data.child_friendly == "No" && data.adoptable == "No"){
-    //   this.getPetByChildFriendly(false);
-    //   this.getPetByAdoptable(false);
-    //   console.log("0|0")
-    // }
-    // else {
-    //   consaole.log("Other selected")
-    // }
-
+    //This section is basically for if user has inputted X into the query
+    //and if X is found in the database (i.e. there's a match),
+    //then return something, else do nothing
+    //This is super specific here, but maybe a more advanced person could shorten the code length considerably
     let limits: {[k: string]: any} = {};
 
     if(data.name != ""){
-      //if(data.name == this.pet.name){
         limits.name = data.name;
-      //}
-      //else{
-      //  return data.name + "could not be found";
-      //}
     }
-    // else{
-    //   return "could not be found";
-    // }
-
     if(data.category == "Cats"){
       limits.category = "cats";
     }
@@ -506,19 +441,14 @@ export class AdoptPageComponent implements OnInit {
 
     console.log(limits)
 
+    //Matching ends
+
     this.apiService.getSome(limits).subscribe((data) => {
       this.pet = data
     })
-
-    // if(document.getElementById("selectAdoptable").value == "true"){
-    //   this.str = this.str + " Pet: " + this.getPetByAdoptable
-    // }
   }
 
-  //submitQuery(){
-    //console.log('Button Clicked');
-  //}
-
+  //Again, one GET from database each
   getPetByName(name){
     this.apiService.getPetByName(name).subscribe((data) => {
       this.pet = data;
@@ -615,4 +545,5 @@ export class AdoptPageComponent implements OnInit {
       //console.log(this.pet);
     })
   }
+  //GET ends
 }
